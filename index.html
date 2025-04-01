@@ -12,16 +12,20 @@
             color: black;
             font-family: "Arial", sans-serif;
             text-align: center;
+            margin: 0;
+            overflow-x: hidden; /* 横スクロール防止 */
         }
         .logo {
             font-family: 'Press Start 2P', cursive;
-            font-size: 48px;
+            font-size: 36px; /* ちょっと小さく */
             color: cyan;
             text-shadow: 4px 4px black, 2px 2px magenta;
-            margin-top: 20px;
+            margin: 20px auto;
+            word-wrap: break-word; /* 長い文字の折り返し */
+            max-width: 90%; /* 幅制限 */
         }
         table {
-            width: 80%;
+            max-width: 90%; /* 幅を制限 */
             margin: auto;
             border: 5px solid blue;
             background-color: white;
@@ -29,7 +33,7 @@
         }
         h1 {
             color: red;
-            font-size: 32px;
+            font-size: 28px; /* 少し小さく */
             text-shadow: 2px 2px yellow;
         }
         h2 {
@@ -38,7 +42,7 @@
             padding: 5px;
         }
         .marquee {
-            font-size: 20px;
+            font-size: 18px; /* 小さめに調整 */
             font-weight: bold;
             color: white;
             background: red;
