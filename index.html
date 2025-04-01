@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="Shift_JIS">
-    <meta name="viewport" content="width=120, initial-scale=1">
-    <title>会社概要</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 - Windows 95風</title>
     <style>
         body {
-            background-color: white;
-            color: black;
-            font-family: "MS Gothic", sans-serif;
-            font-size: 12px;
-            max-width: 120px;
-            margin: auto;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid black;
-        }
-        .title {
+            background-color: #c0c0c0;
+            font-family: "MS UI Gothic", sans-serif;
             font-size: 14px;
+            margin: 20px;
+        }
+        .window {
+            width: 400px;
+            background: #fff;
+            border: 2px solid #000;
+            padding: 5px;
+            box-shadow: 4px 4px gray;
+        }
+        .title-bar {
+            background: navy;
+            color: white;
+            padding: 3px;
             font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .menu {
-            text-align: left;
+        .title-bar button {
+            background: gray;
+            border: 1px solid black;
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            cursor: pointer;
         }
-        .menu a {
-            text-decoration: none;
-            color: black;
+        .content {
+            background: #dcdcdc;
+            padding: 10px;
+            border: 2px inset gray;
+        }
+        .button {
+            background: #dcdcdc;
+            border: 2px outset gray;
+            padding: 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .button:active {
+            border: 2px inset gray;
         }
     </style>
 </head>
 <body>
 
-<div class="title">◆ 会社概要 ◆</div>
-<hr>
-
-<div class="menu">
-▶ <a href="#philosophy">事業理念</a><br>
-▶ <a href="#business">事業内容</a><br>
-▶ <a href="#info">会社情報</a><br>
+<div class="window">
+    <div class="title-bar">
+        会社概要
+        <button>X</button>
+    </div>
+    <div class="content">
+        <p><strong>【事業理念】</strong></p>
+        <p>「信頼を礎に、新たな価値を創造する」</p>
+        <p>私たちは不動産賃貸業を通じて安心と快適な住環境を提供してきました。</p>
+        <p>この信頼を礎に、電子機器の販売を開始し、人々の生活を支えていきます。</p>
+        <p><strong>【事業内容】</strong></p>
+        <ul>
+            <li>🏠 不動産賃貸業（現在3家族に賃貸中）</li>
+            <li>📱 電子機器のオンライン販売（秋葉原にて販売予定）</li>
+        </ul>
+        <p><strong>【会社情報】</strong></p>
+        <p>会社名: 株式会社○○○○</p>
+        <p>所在地: 東京都千代田区秋葉原○丁目○番</p>
+        <p>代表者: 代表取締役 ○○○○</p>
+        <div class="button">OK</div>
+    </div>
 </div>
-
-<hr>
-<a name="philosophy"></a>
-【事業理念】<br>
-<strong>信頼を礎に、新たな価値を創造する</strong><br>
-私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
-この信頼を礎に、電子機器販売を開始し、人々の生活を支えていきます。<br>
-<hr>
-
-<a name="business"></a>
-【事業内容】<br>
-● 不動産賃貸業<br>
-現在3家族に賃貸中。<br>
-● 電子機器のオンライン販売<br>
-秋葉原に移転し、スマホ・PCを販売予定。<br>
-<hr>
-
-<a name="info"></a>
-【会社情報】<br>
-会社名: 株式会社○○○○<br>
-所在地: 東京都千代田区秋葉原○丁目○番<br>
-代表者: 代表取締役 ○○○○<br>
-<hr>
-
-【戻る】<br>
-<a href="#">トップへ</a>
 
 </body>
 </html>
