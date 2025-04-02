@@ -30,9 +30,9 @@
             background-color: white;
             padding: 20px;
         }
-        h1 {
+        h1, h3 {
             color: red;
-            font-size: 28px;
+            font-size: 24px;
             text-shadow: 2px 2px yellow;
         }
         h2 {
@@ -47,7 +47,7 @@
             background: red;
             padding: 5px;
         }
-        .property, .product, .news {
+        .property, .product, .news, .company-info {
             border: 3px solid blue;
             padding: 15px;
             margin: 10px auto;
@@ -66,21 +66,6 @@
             color: white;
             padding: 10px;
         }
-        #game-container {
-            margin: 20px auto;
-            padding: 10px;
-            background: white;
-            border: 3px solid blue;
-            display: inline-block;
-        }
-        #click-button {
-            font-size: 16px;
-            padding: 10px;
-            background: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -88,21 +73,6 @@
 <div class="logo">xUltraTex</div>
 
 <marquee class="marquee">✨ ようこそ！xUltraTexの公式ページへ ✨</marquee>
-
-<!-- シンプルなブラウザゲーム -->
-<div id="game-container">
-    <p>💥クリックしてスコアをためよう！💥</p>
-    <button id="click-button">クリック！</button>
-    <p>スコア: <span id="score">0</span></p>
-</div>
-
-<script>
-    let score = 0;
-    document.getElementById("click-button").addEventListener("click", function() {
-        score++;
-        document.getElementById("score").textContent = score;
-    });
-</script>
 
 <!-- NEWS セクション -->
 <h2>📰 xNEWSx</h2>
@@ -148,27 +118,33 @@
     <img src="IMG_8631.jpeg" alt="ロゴTシャツ Yellow">
 </div>
 
-<!-- 会社概要（ロゴTシャツ Yellowの後ろ） -->
+<!-- 会社概要 -->
 <h2>🌟 会社概要 🌟</h2>
 
-<h2>事業理念</h2>
-<p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
-<p>
-    私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
-    この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。
-</p>
+<table class="company-info">
+    <tr>
+        <td>
+            <h2>事業理念</h2>
+            <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
+            <p>
+                私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
+                この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。
+            </p>
 
-<h2>事業内容</h2>
-<h3>🏠 不動産賃貸業</h3>
-<p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
+            <h2>事業内容</h2>
+            <h3>🏠 不動産賃貸業</h3>
+            <p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
 
-<h3>📱 電子機器のオンライン販売</h3>
-<p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
+            <h3>📱 電子機器のオンライン販売</h3>
+            <p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
 
-<h2>会社情報</h2>
-<p><strong>会社名:</strong> 株式会社○○○○（仮）</p>
-<p><strong>所在地:</strong> 東京都千代田区秋葉原○丁目○番（仮）</p>
-<p><strong>代表者:</strong> 代表取締役 ○○○○（仮）</p>
+            <h2>会社情報</h2>
+            <p><strong>会社名:</strong> 株式会社○○○○（仮）</p>
+            <p><strong>所在地:</strong> 東京都千代田区秋葉原○丁目○番（仮）</p>
+            <p><strong>代表者:</strong> 代表取締役 ○○○○（仮）</p>
+        </td>
+    </tr>
+</table>
 
 <footer>
     &copy; 2025 株式会社○○○○. All Rights Reserved.
