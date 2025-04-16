@@ -1,149 +1,131 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xUltraTex | 古着リユース回収プロジェクト</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>xUltraTex - 古着回収サービス</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #f9f9f6;
+      color: #333;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Noto Sans JP', sans-serif;
-            background: #f7f5f2;
-            color: #333;
-            line-height: 1.8;
-        }
+    header {
+      background-color: #dbe4d1;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        header {
-            background: #a8c0a8;
-            color: white;
-            text-align: center;
-            padding: 30px 10px;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+    .hero {
+      background-color: #f1f1ec;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-        .main-visual {
-            width: 100%;
-            max-width: 900px;
-            margin: 20px auto;
-            text-align: center;
-        }
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .main-visual img {
-            width: 90%;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .hero p {
+      font-size: 1rem;
+      color: #666;
+    }
 
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-        }
+    .section {
+      padding: 1.5rem 1rem;
+    }
 
-        h2 {
-            border-left: 6px solid #a8c0a8;
-            padding-left: 10px;
-            color: #444;
-        }
+    .section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
 
-        p {
-            margin: 10px 0;
-        }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .img-box {
-            text-align: center;
-            margin: 20px 0;
-        }
+    .section li {
+      margin-bottom: 0.5rem;
+    }
 
-        .img-box img {
-            max-width: 300px;
-            width: 90%;
-            margin: 10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
+    .contact-buttons a {
+      display: inline-block;
+      margin: 0.5rem 1rem 0.5rem 0;
+      padding: 0.8rem 1.2rem;
+      background-color: #aac8a7;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-        footer {
-            background: #444;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
-    </style>
+    .flow-step {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #dbe4d1;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>xUltraTex 古着回収プロジェクト</h1>
-    <p>— すべての洋服に、もう一度スポットライトを —</p>
+  <h1>xUltraTex 古着回収</h1>
 </header>
 
-<div class="main-visual">
-    <img src="IMG_8631.jpeg" alt="古着メインビジュアル">
-</div>
-
-<section>
-    <h2>古着を回収しています！</h2>
-    <p>
-        私たちは、ご家庭で眠っているお洋服を再び活かすために<br>
-        <strong>45L袋にいっぱいで1000円</strong>にて回収しております。
-    </p>
-    <p>
-        世代・年代は問いません。キッズ・メンズ・レディース、すべてOK！<br>
-        ※ 状態によっては回収をお断りする場合があります。
-    </p>
-    <p>
-        回収した衣類は、クリーニング・検品・仕分けのうえ、国内外のマーケット（eBay・ヤフオク・メルカリ等）にて再販。<br>
-        廃棄を減らし、衣類に新たな命を吹き込む — 私たちはそんな循環型の社会に貢献したいと考えています。
-    </p>
+<section class="hero">
+  <h2>45Lの袋で古着を1000円で買取！</h2>
+  <p>あなたの不要な服を、次に大切にしてくれる人へ。</p>
 </section>
 
-<section>
-    <h2>ご連絡方法</h2>
-    <p>
-        回収のご依頼は、<strong>InstagramのDM</strong>または<strong>SMS</strong>にて承っております。<br>
-        初めての方も、お気軽にご連絡ください。
-    </p>
-    <p>
-        ※連絡先は現在準備中です。<br>
-        ※LINEなど追加チャネルについても、順次導入予定です。
-    </p>
+<section class="section">
+  <h3>対象アイテム</h3>
+  <ul>
+    <li>・20〜30代向けの服</li>
+    <li>・子育て世代の衣類</li>
+    <li>・状態の良いもの（破れ・シミなし）</li>
+    <li>・ユニクロ・GU〜ブランド古着まで歓迎</li>
+  </ul>
 </section>
 
-<section>
-    <h2>活動の一部をご紹介</h2>
-    <div class="img-box">
-        <img src="IMG_4373.jpeg" alt="物件写真1">
-        <img src="IMG_1917.jpeg" alt="物件写真2">
-        <img src="IMG_8632.jpeg" alt="キャップ商品画像">
-    </div>
+<section class="section">
+  <h3>連絡方法</h3>
+  <div class="contact-buttons">
+    <a href="#">Instagram DM</a>
+    <a href="#">SMSで連絡</a>
+    <a href="#">LINEで連絡</a>
+  </div>
+  <p style="font-size:0.9rem; color: #777;">※QRコードやIDは後ほど掲載予定</p>
 </section>
 
-<section>
-    <h2>なぜ古着？なぜ今？</h2>
-    <p>
-        大量生産・大量廃棄の時代が続く中で、私たちは「再流通の力」を信じています。<br>
-        サステナブルな社会の実現は、遠い未来の話ではありません。<br>
-        一人ひとりの小さなアクションが、やがて大きな循環を生むのです。
-    </p>
-    <p>
-        <strong>SDGs 12.「つくる責任、つかう責任」</strong><br>
-        私たちの活動は、この目標にも深く共鳴しています。
-    </p>
+<section class="section">
+  <h3>回収の流れ</h3>
+  <div class="flow-step">1. InstagramやSMSでご連絡ください</div>
+  <div class="flow-step">2. 日程を調整します</div>
+  <div class="flow-step">3. ご自宅まで直接引き取りに伺います</div>
+</section>
+
+<section class="section">
+  <h3>Instagram</h3>
+  <p>@sakitama6425 をフォローして最新情報をチェック！</p>
 </section>
 
 <footer>
-    &copy; 2025 xUltraTex. All Rights Reserved.
+  <p>xUltraTex（エックスウルトラテックス）</p>
+  <p>古着回収・再販プロジェクト</p>
 </footer>
 
 </body>
