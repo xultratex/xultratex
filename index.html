@@ -85,7 +85,9 @@
 <div class="section">
   <h2>📊 BTCUSD テクニカルメーター（全時間足）</h2>
 
-  <!-- 時間軸リスト -->
+  <!-- ウィジェット挿入ポイント -->
+  <div id="tv-widgets"></div>
+
   <script>
     const intervals = [
       { label: "1分足", interval: "1m" },
@@ -104,33 +106,32 @@
       const container = document.getElementById('tv-widgets');
 
       intervals.forEach(i => {
-        const widgetDiv = document.createElement('div');
-        widgetDiv.innerHTML = `
-          <h3>${i.label}</h3>
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js">
-            {
-              "interval": "${i.interval}",
-              "width": "100%",
-              "isTransparent": false,
-              "height": "450",
-              "symbol": "BITSTAMP:BTCUSD",
-              "showIntervalTabs": false,
-              "displayMode": "multiple",
-              "locale": "ja"
-            }
-            </script>
-          </div>
-        `;
-        container.appendChild(widgetDiv);
+        const section = document.createElement('div');
+        section.innerHTML = `<h3>${i.label}</h3><div class="tradingview-widget-container__widget" id="tv-${i.interval}"></div>`;
+        container.appendChild(section);
+
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js';
+        script.async = true;
+        script.innerHTML = JSON.stringify({
+          interval: i.interval,
+          width: "100%",
+          isTransparent: false,
+          height: 450,
+          symbol: "BITSTAMP:BTCUSD",
+          showIntervalTabs: false,
+          displayMode: "multiple",
+          locale: "ja"
+        });
+
+        section.querySelector('.tradingview-widget-container__widget').appendChild(script);
       });
     });
   </script>
-
-  <!-- ウィジェット挿入ポイント -->
-  <div id="tv-widgets"></div>
 </div>
+
+
 <!-- NEWS セクション -->
 <h2>📰 xNEWSx</h2>
 <div class="section">
