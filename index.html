@@ -1,231 +1,185 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xUltraTex</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* ドットフォント */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会社概要 | 事業内容</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-        body {
-            background: linear-gradient(45deg, #ffcc00, #ff6699);
-            color: black;
-            font-family: "Arial", sans-serif;
-            text-align: center;
-            margin: 0;
-            overflow-x: hidden; /* 横スクロール防止 */
-        }
-        .logo {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 36px;
-            color: cyan;
-            text-shadow: 4px 4px black, 2px 2px magenta;
-            margin: 20px auto;
-            max-width: 90%;
-        }
-        h1, h3 {
-            color: red;
-            font-size: 24px;
-            text-shadow: 2px 2px yellow;
-        }
-        h2 {
-            background: blue;
-            color: white;
-            padding: 5px;
-        }
-        .marquee {
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background: red;
-            padding: 5px;
-        }
-        .section {
-            border: 3px solid blue;
-            padding: 15px;
-            margin: 10px auto;
-            background: white;
-            max-width: 80%;
-            text-align: center;
-        }
-        img {
-            width: 90%;
-            max-width: 400px;
-            border: 2px solid black;
-        }
-        footer {
-            margin-top: 20px;
-            background: black;
-            color: white;
-            padding: 10px;
-        }
-        .link {
-            background: black;
-            color: cyan;
-            padding: 10px;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-        }
-    </style>
+    body {
+      background: linear-gradient(45deg, #ffcc00, #ff6699);
+      color: black;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .logo {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 36px;
+      color: cyan;
+      text-shadow: 4px 4px black, 2px 2px magenta;
+      margin: 20px auto;
+      max-width: 90%;
+    }
+    h1, h3 {
+      color: red;
+      font-size: 24px;
+      text-shadow: 2px 2px yellow;
+    }
+    h2 {
+      background: blue;
+      color: white;
+      padding: 5px;
+    }
+    .marquee {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: red;
+      padding: 5px;
+    }
+    .section {
+      border: 3px solid blue;
+      padding: 15px;
+      margin: 10px auto;
+      background: white;
+      max-width: 80%;
+      text-align: center;
+    }
+    img {
+      width: 90%;
+      max-width: 400px;
+      border: 2px solid black;
+    }
+    footer {
+      margin-top: 20px;
+      background: black;
+      color: white;
+      padding: 10px;
+    }
+    .link {
+      background: black;
+      color: cyan;
+      padding: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-
-
 <div class="logo">xUltraTex</div>
-
 <marquee class="marquee">✨ ようこそ💁xU1traTex公式ホームページへ ✨</marquee>
-
-<!-- TikTokリンク -->
 <a href="https://lite.tiktok.com/t/ZSryMXgwX/" class="link" target="_blank">▶ TikTokはこちら</a>
 
-<!-- BTCUSD テクニカル分析メーター（全時間軸縦並び） -->
+<!-- BTCUSD テクニカル分析メーター -->
 <div class="section">
-  <h2>📊 BTCUSD テクニカルメーター（全時間足）</h2>
+  <h2>📊 BTCUSD テクニカルメーター（全時間足 × 全モード）</h2>
 
-  <!-- ウィジェット挿入ポイント -->
   <div id="tv-widgets"></div>
+</div>
 
-  <script>
-    const intervals = [
-      { label: "1分足", interval: "1m" },
-      { label: "5分足", interval: "5m" },
-      { label: "15分足", interval: "15m" },
-      { label: "30分足", interval: "30m" },
-      { label: "1時間足", interval: "1h" },
-      { label: "2時間足", interval: "2h" },
-      { label: "4時間足", interval: "4h" },
-      { label: "1日足", interval: "1D" },
-      { label: "1週間足", interval: "1W" },
-      { label: "1ヶ月足", interval: "1M" }
-    ];
+<script>
+  const intervals = [
+    { label: "1分足", value: "1m" },
+    { label: "5分足", value: "5m" },
+    { label: "15分足", value: "15m" },
+    { label: "30分足", value: "30m" },
+    { label: "1時間足", value: "1h" },
+    { label: "2時間足", value: "2h" },
+    { label: "4時間足", value: "4h" },
+    { label: "1日足", value: "1D" },
+    { label: "1週間足", value: "1W" },
+    { label: "1ヶ月足", value: "1M" }
+  ];
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const container = document.getElementById('tv-widgets');
+  const modes = [
+    { label: "サマリー", value: "summary" },
+    { label: "オシレーター", value: "oscillators" },
+    { label: "移動平均", value: "moving_averages" }
+  ];
 
-      intervals.forEach(i => {
-        const section = document.createElement('div');
-        section.innerHTML = `<h3>${i.label}</h3><div class="tradingview-widget-container__widget" id="tv-${i.interval}"></div>`;
-        container.appendChild(section);
+  window.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('tv-widgets');
 
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js';
-        script.async = true;
-        script.innerHTML = JSON.stringify({
-          interval: i.interval,
-          width: "100%",
-          isTransparent: false,
-          height: 450,
-          symbol: "BITSTAMP:BTCUSD",
-          showIntervalTabs: false,
-          displayMode: "multiple",
-          locale: "ja"
-        });
+    intervals.forEach(interval => {
+      const timeTitle = document.createElement('h3');
+      timeTitle.innerText = interval.label;
+      container.appendChild(timeTitle);
 
-        section.querySelector('.tradingview-widget-container__widget').appendChild(script);
+      modes.forEach(mode => {
+        const widgetDiv = document.createElement('div');
+        widgetDiv.className = 'tradingview-widget-container';
+        widgetDiv.innerHTML = `
+          <h4>${mode.label}</h4>
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js">
+          {
+            "interval": "${interval.value}",
+            "width": "100%",
+            "isTransparent": false,
+            "height": "200",
+            "symbol": "BITSTAMP:BTCUSD",
+            "showIntervalTabs": false,
+            "displayMode": "${mode.value}",
+            "locale": "ja"
+          }
+          </script>
+        `;
+        container.appendChild(widgetDiv);
       });
     });
-  </script>
-</div>
+  });
+</script>
 
-
-<!-- NEWS セクション -->
+<!-- 以下は既存の構成をそのまま残してます -->
 <h2>📰 xNEWSx</h2>
 <div class="section">
-    <p>📢 近日公開：公式グッズ販売</p>
-    <p>📢 近日公開：電子機器販売</p>
-    <p>📢 2025年3月：秋葉原に移転しました</p>
+  <p>📢 近日公開：公式グッズ販売</p>
+  <p>📢 近日公開：電子機器販売</p>
+  <p>📢 2025年3月：秋葉原に移転しました</p>
 </div>
 
-<!-- 会社概要 -->
 <h2>🌟 会社概要 🌟</h2>
-
 <div class="section">
-    <h2>📌 事業理念</h2>
-    <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
-    <p>
-        私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
-        この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。
-    </p>
+  <h2>📌 事業理念</h2>
+  <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
+  <p>私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。</p>
 </div>
 
 <div class="section">
-    <h2>🌐 サイト名の由来</h2>
-    <p>
-        スマートフォンは今や生活に不可欠な存在となり、中古品のリユースはエコでサステナブルな社会に貢献します。<br>
-        将来的には、誰でも売ったり買ったりできるサイトに発展させることを目指し、<br>
-        「Ultra（究極・超）」と「Trade（売買）」を掛け合わせて「Trate」という言葉を作りました。<br>
-        さらに、「Trate」には「Trade（売買）」と「Rental（賃貸）」の意味も込めています。<br>
-        そこに秋葉原らしい理数系の「Tex」の要素を加え、「xUltraTex」を考えました。
-    </p>
+  <h2>🌐 サイト名の由来</h2>
+  <p>スマートフォンは今や生活に不可欠な存在となり、中古品のリユースはエコでサステナブルな社会に貢献します。<br>将来的には、誰でも売ったり買ったりできるサイトに発展させることを目指し、<br>「Ultra（究極・超）」と「Trade（売買）」を掛け合わせて「Trate」という言葉を作りました。<br>さらに、「Trate」には「Trade（売買）」と「Rental（賃貸）」の意味も込めています。<br>そこに秋葉原らしい理数系の「Tex」の要素を加え、「xUltraTex」を考えました。</p>
 </div>
 
 <div class="section">
-    <h2>💼 事業内容</h2>
-    <h3>🏠 不動産賃貸業</h3>
-    <p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
-
-    <h3>📱 電子機器のオンライン販売</h3>
-    <p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
+  <h2>💼 事業内容</h2>
+  <h3>🏠 不動産賃貸業</h3>
+  <p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
+  <h3>📱 電子機器のオンライン販売</h3>
+  <p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
 </div>
 
-<!-- 物件情報 -->
 <h2>🏡 x取扱物件x</h2>
+<div class="section"><h3>茨城県 3LDK（現在賃貸中）</h3><img src="DF59D336-B2EE-4A18-9A41-4625A0C990BA.jpeg" alt="茨城県 3LDK"></div>
+<div class="section"><h3>神奈川県 3LDK（現在賃貸中）</h3><img src="IMG_4373.jpeg" alt="神奈川県 3LDK"></div>
+<div class="section"><h3>埼玉県 4LDK（SOLD OUT）</h3><img src="IMG_1917.jpeg" alt="埼玉県 4LDK"></div>
 
-<div class="section">
-    <h3>茨城県 3LDK（現在賃貸中）</h3>
-    <img src="DF59D336-B2EE-4A18-9A41-4625A0C990BA.jpeg" alt="茨城県 3LDK">
-</div>
-
-<div class="section">
-    <h3>神奈川県 3LDK（現在賃貸中）</h3>
-    <img src="IMG_4373.jpeg" alt="神奈川県 3LDK">
-</div>
-
-<div class="section">
-    <h3>埼玉県 4LDK（SOLD OUT）</h3>
-    <img src="IMG_1917.jpeg" alt="埼玉県 4LDK">
-</div>
-
-<!-- 商品情報 -->
 <h2>🛍️ xGOODS INFOx</h2>
+<div class="section"><h3>ロゴキャップ ¥2,980</h3><img src="IMG_8632.jpeg" alt="ロゴキャップ"></div>
+<div class="section"><h3>ロゴTシャツ (White) ¥3,980</h3><img src="IMG_8627.jpeg" alt="ロゴTシャツ White"></div>
+<div class="section"><h3>ロゴTシャツ (Yellow) ¥3,980</h3><img src="IMG_8631.jpeg" alt="ロゴTシャツ Yellow"></div>
 
-<div class="section">
-    <h3>ロゴキャップ ¥2,980</h3>
-    <img src="IMG_8632.jpeg" alt="ロゴキャップ">
-</div>
+<footer>&copy; 2025 xUltraTex. All Rights Reserved.</footer>
 
-<div class="section">
-    <h3>ロゴTシャツ (White) ¥3,980</h3>
-    <img src="IMG_8627.jpeg" alt="ロゴTシャツ White">
-</div>
-
-<div class="section">
-    <h3>ロゴTシャツ (Yellow) ¥3,980</h3>
-    <img src="IMG_8631.jpeg" alt="ロゴTシャツ Yellow">
-</div>
-
-<footer>
-    &copy; 2025 xUltraTex. All Rights Reserved.
-</footer>
+<!-- 広告バナー -->
+<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=392' target='_blank'><img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='728' height='90' border='0'></a>
+<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=146' target='_blank'><img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20744&uid=354644' width='728' height='90' border='0'></a>
+<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=1' target='_blank'><img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20730&uid=354644' width='728' height='90' border='0'></a>
 
 </body>
 </html>
-
-<!-- バナー(SOD select)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=392' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(ＦＣ２動画)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=146' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20744&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(FC2 Affiliate)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=1' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20730&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
