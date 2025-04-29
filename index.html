@@ -1,207 +1,151 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xUltraTex</title>
+    <title>xUltraTex | 古着×秋葉原</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* ドットフォント */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
         body {
-            background: linear-gradient(45deg, #ffcc00, #ff6699);
-            color: black;
-            font-family: "Arial", sans-serif;
-            text-align: center;
             margin: 0;
-            overflow-x: hidden; /* 横スクロール防止 */
+            background: linear-gradient(45deg, #ffcc00, #ff6699);
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #222;
+            overflow-x: hidden;
         }
-        .logo {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 36px;
+
+        header {
+            background: black;
             color: cyan;
-            text-shadow: 4px 4px black, 2px 2px magenta;
+            text-align: center;
+            padding: 30px 10px;
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 2px 2px magenta;
+        }
+
+        .marquee {
+            background: red;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .main-visual {
+            text-align: center;
             margin: 20px auto;
-            max-width: 90%;
         }
-        h1, h3 {
-            color: red;
-            font-size: 24px;
-            text-shadow: 2px 2px yellow;
+
+        .main-visual img {
+            width: 90%;
+            max-width: 600px;
+            border: 3px solid black;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0px magenta;
         }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border: 4px dashed blue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
         h2 {
+            font-size: 24px;
             background: blue;
             color: white;
-            padding: 5px;
-        }
-        .marquee {
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background: red;
-            padding: 5px;
-        }
-        .section {
-            border: 3px solid blue;
-            padding: 15px;
-            margin: 10px auto;
-            background: white;
-            max-width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
             text-align: center;
         }
-        img {
-            width: 90%;
-            max-width: 400px;
-            border: 2px solid black;
+
+        h3 {
+            font-size: 18px;
+            color: red;
+            text-shadow: 1px 1px yellow;
         }
-        footer {
-            margin-top: 20px;
-            background: black;
-            color: white;
-            padding: 10px;
+
+        .img-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
+
+        .img-box img {
+            max-width: 250px;
+            border: 2px solid #333;
+            border-radius: 6px;
+        }
+
         .link {
+            display: inline-block;
             background: black;
             color: cyan;
-            padding: 10px;
+            padding: 10px 20px;
             font-weight: bold;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
+            margin: 20px auto;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>xUltraTex</h1>
+    <p style="font-size: 14px;">FASHION x RECYCLE x FUTURE</p>
+</header>
 
+<div class="marquee">✨ ようこそ！xUltraTex古着リユースプロジェクトへ ✨</div>
 
-<div class="logo">xUltraTex</div>
-
-<marquee class="marquee">✨ ようこそ💁xU1traTex公式ホームページへ ✨</marquee>
-
-<h2>あなたは <span style="font-family:monospace; color:red;">000042</span> 人目の訪問者です。</h2>
-
-<!-- TikTokリンク -->
-<a href="https://lite.tiktok.com/t/ZSryMXgwX/" class="link" target="_blank">▶ TikTokはこちら</a>
-
-<!-- TradingViewチャートウィジェット -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_btcfx"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-    new TradingView.widget({
-      "width": "100%",
-      "height": 500,
-      "symbol": "BITFLYER:FXBTCJPY",
-      "interval": "30",
-      "timezone": "Asia/Tokyo",
-      "theme": "light",
-      "style": "1",
-      "locale": "ja",
-      "toolbar_bg": "#f1f3f6",
-      "enable_publishing": false,
-      "allow_symbol_change": false,
-      "hide_legend": false,
-      "container_id": "tradingview_btcfx"
-    });
-  </script>
+<div class="main-visual">
+    <img src="IMG_8631.jpeg" alt="古着メインビジュアル">
 </div>
 
-<!-- TradingView テクニカル分析ウィジェット -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js">
-  {
-    "interval": "30m",
-    "width": "100%",
-    "isTransparent": false,
-    "height": "450",
-    "symbol": "BITFLYER:FXBTCJPY",
-    "showIntervalTabs": true,
-    "displayMode": "single",
-    "locale": "ja"
-  }
-  </script>
-</div>
+<section>
+    <h2>古着を回収しています！</h2>
+    <p><strong>45L袋にいっぱいで1000円</strong>にて買取中！</p>
+    <p>キッズ・レディース・メンズ問わず大歓迎。状態によっては回収をお断りする場合があります。</p>
+    <p>回収品はクリーニング・仕分け後、eBay・メルカリ等で再販。廃棄ゼロを目指すサステナブルプロジェクトです！</p>
+</section>
 
+<section>
+    <h2>ご連絡方法</h2>
+    <p>Instagram DM または SMSで受け付けています。</p>
+    <p>※ 連絡先は現在準備中。LINEも導入予定！</p>
+    <a href="https://www.instagram.com/sakitama6425" target="_blank" class="link">▶ Instagramを見る</a>
+</section>
 
+<section>
+    <h2>活動のようす</h2>
+    <div class="img-box">
+        <img src="IMG_4373.jpeg" alt="物件1">
+        <img src="IMG_1917.jpeg" alt="物件2">
+        <img src="IMG_8632.jpeg" alt="キャップ">
+    </div>
+</section>
 
-<!-- NEWS セクション -->
-<h2>📰 xNEWSx</h2>
-<div class="section">
-    <p>📢 近日公開：公式グッズ販売</p>
-    <p>📢 近日公開：電子機器販売</p>
-    <p>📢 2025年3月：秋葉原に移転しました</p>
-</div>
-
-<!-- 会社概要 -->
-<h2>🌟 会社概要 🌟</h2>
-
-<div class="section">
-    <h2>📌 事業理念</h2>
-    <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
-    <p>
-        私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
-        この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。
-    </p>
-</div>
-
-<div class="section">
-    <h2>🌐 サイト名の由来</h2>
-    <p>
-        スマートフォンは今や生活に不可欠な存在となり、中古品のリユースはエコでサステナブルな社会に貢献します。<br>
-        将来的には、誰でも売ったり買ったりできるサイトに発展させることを目指し、<br>
-        「Ultra（究極・超）」と「Trade（売買）」を掛け合わせて「Trate」という言葉を作りました。<br>
-        さらに、「Trate」には「Trade（売買）」と「Rental（賃貸）」の意味も込めています。<br>
-        そこに秋葉原らしい理数系の「Tex」の要素を加え、「xUltraTex」を考えました。
-    </p>
-</div>
-
-<div class="section">
-    <h2>💼 事業内容</h2>
-    <h3>🏠 不動産賃貸業</h3>
-    <p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
-
-    <h3>📱 電子機器のオンライン販売</h3>
-    <p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
-</div>
-
-<!-- 物件情報 -->
-<h2>🏡 x取扱物件x</h2>
-
-<div class="section">
-    <h3>茨城県 3LDK（現在賃貸中）</h3>
-    <img src="DF59D336-B2EE-4A18-9A41-4625A0C990BA.jpeg" alt="茨城県 3LDK">
-</div>
-
-<div class="section">
-    <h3>神奈川県 3LDK（現在賃貸中）</h3>
-    <img src="IMG_4373.jpeg" alt="神奈川県 3LDK">
-</div>
-
-<div class="section">
-    <h3>埼玉県 4LDK（SOLD OUT）</h3>
-    <img src="IMG_1917.jpeg" alt="埼玉県 4LDK">
-</div>
-
-<!-- 商品情報 -->
-<h2>🛍️ xGOODS INFOx</h2>
-
-<div class="section">
-    <h3>ロゴキャップ ¥2,980</h3>
-    <img src="IMG_8632.jpeg" alt="ロゴキャップ">
-</div>
-
-<div class="section">
-    <h3>ロゴTシャツ (White) ¥3,980</h3>
-    <img src="IMG_8627.jpeg" alt="ロゴTシャツ White">
-</div>
-
-<div class="section">
-    <h3>ロゴTシャツ (Yellow) ¥3,980</h3>
-    <img src="IMG_8631.jpeg" alt="ロゴTシャツ Yellow">
-</div>
+<section>
+    <h2>なぜ古着？なぜ今？</h2>
+    <p>大量生産・大量廃棄の時代を超えて、再流通の力で未来を変える。</p>
+    <p>小さな回収が、世界の資源を守る第一歩になります。</p>
+    <p><strong>SDGs目標12「つくる責任、つかう責任」</strong>にも貢献しています。</p>
+</section>
 
 <footer>
     &copy; 2025 xUltraTex. All Rights Reserved.
@@ -209,18 +153,3 @@
 
 </body>
 </html>
-
-<!-- バナー(SOD select)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=392' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(ＦＣ２動画)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=146' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20744&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(FC2 Affiliate)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=1' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20730&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
