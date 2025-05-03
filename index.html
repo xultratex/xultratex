@@ -1,229 +1,126 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>xUltraTex | 古着リユース回収プロジェクト</title>
-  <meta name="description" content="秋葉原発・xUltraTex公式サイト。古着回収、スマホ買取、不動産賃貸、公式グッズ販売、ビットコインチャートなど、てんこ盛り展開中！">
-  <meta name="keywords" content="古着,スマホ買取,秋葉原,xUltraTex,ビットコイン,不動産,サステナブル,90年代デザイン,ロゴグッズ,リユース">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xUltraTex - Akihabara Resale Project</title>
+  <meta name="description" content="xUltraTex: Akihabara-based project. Buy/sell second-hand clothes, smartphones, and real estate. Sustainable, techy and retro-futuristic.">
+  <meta name="keywords" content="used clothes, smartphone, resale, bitcoin, Akihabara, xUltraTex, 90s design, retro, sustainable, Japan">
   <style>
     body {
-      background: linear-gradient(45deg, #ffcc00, #ff6699);
-      color: black;
-      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #ffe066, #ff6ec7);
+      font-family: 'Courier New', monospace;
+      color: #00ffff;
+      text-shadow: 1px 1px #000;
       margin: 0;
-      overflow-x: hidden;
+      padding: 0;
     }
-    .logo {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 36px;
-      color: cyan;
-      text-shadow: 4px 4px black, 2px 2px magenta;
-      margin: 20px auto;
-      max-width: 90%;
+    header, footer {
+      background: #000;
+      padding: 20px;
       text-align: center;
     }
-    h1, h2, h3 {
-      color: red;
-      text-shadow: 2px 2px yellow;
+    h1 {
+      font-size: 2.5em;
+      color: #00ffff;
     }
     h2 {
-      background: blue;
-      color: white;
-      padding: 5px;
+      color: #ff00ff;
     }
-    .marquee {
-      font-size: 18px;
+    section {
+      padding: 20px;
+      border-bottom: 2px dashed #ff00ff;
+    }
+    .logo {
+      font-size: 2em;
       font-weight: bold;
-      color: white;
-      background: red;
-      padding: 5px;
+      color: #00ffff;
+    }
+    .ticker, .meter {
       text-align: center;
+      margin: 20px 0;
     }
-    .section {
-      border: 3px solid blue;
-      padding: 15px;
-      margin: 10px auto;
-      background: white;
-      max-width: 900px;
+    a {
+      color: #00ff99;
+      text-decoration: underline;
     }
-    img {
-      width: 90%;
-      max-width: 400px;
-      border: 2px solid black;
-      margin: 10px auto;
-      display: block;
-    }
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-    .link {
-      background: black;
-      color: cyan;
-      padding: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin: 10px auto;
+    .multi {
+      font-size: 0.9em;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
 
-<div class="logo">xUltraTex</div>
-<div class="marquee">✨ ようこそ xUltraTex 公式サイトへ ✨</div>
+<header>
+  <div class="logo">xUltraTex</div>
+  <p class="multi">Akihabara's Resale & Reuse Project / 秋葉原発のリユース・再販プロジェクト</p>
+</header>
 
-<h2>あなたは <span style="font-family:monospace; color:red;">000042</span> 人目の訪問者です。</h2>
+<section>
+  <h2>♻️ Clothing Recycling Project / 古着回収プロジェクト</h2>
+  <p>We buy pre-loved clothes for <strong>¥1000 per 45L bag</strong>! / 45L袋あたり1000円で回収中！</p>
+  <p>Contact via <a href="https://www.instagram.com/sakitama6425" target="_blank">Instagram DM</a> or SMS. / Instagram DMまたはSMSでご連絡ください。</p>
+  <p>Pick-up service available in Tokyo. / 東京都内引き取りOK。</p>
+</section>
 
-<a href="https://lite.tiktok.com/t/ZSryMXgwX/" class="link" target="_blank">▶ TikTokはこちら</a>
+<section>
+  <h2>📱 Smartphone Buyback / スマホ買取</h2>
+  <p>We buy used iPhones, Android devices, and tablets. / 中古スマホ・タブレット高価買取中！</p>
+  <p>Entirely online process, safe and fast. / 全てネットで完結・安心スピード対応。</p>
+</section>
 
-<!-- TradingViewチャート -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_btcfx"></div>
-  <script src="https://s3.tradingview.com/tv.js"></script>
-  <script>
-    new TradingView.widget({
+<section>
+  <h2>🏘️ Real Estate for FIRE / 不動産賃貸</h2>
+  <p>We rent out family homes and renovate old houses. / ファミリー向け戸建てをリノベして賃貸中。</p>
+  <p>All 3 properties currently rented. / 現在3棟すべて賃貸中。</p>
+</section>
+
+<section>
+  <h2>🌐 Official Goods & Affiliate Links / 公式グッズ & アフィリンク</h2>
+  <p>Support us by checking out our tools for washing, photography, and more. / 洗濯機・撮影機材など便利グッズを紹介中！</p>
+  <ul>
+    <li><a href="#">Washing Machine for Clothes Resellers</a></li>
+    <li><a href="#">Photo Kit for Mercari Listings</a></li>
+    <li><a href="#">SIM-free Accessories</a></li>
+  </ul>
+</section>
+
+<section class="ticker">
+  <h2>₿ Bitcoin Price Chart</h2>
+  <!-- TradingView ウィジェット埋め込み -->
+  <div class="tradingview-widget-container">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+      "symbol": "BITSTAMP:BTCUSD",
       "width": "100%",
-      "height": 400,
-      "symbol": "BITFLYER:FXBTCJPY",
-      "interval": "30",
-      "timezone": "Asia/Tokyo",
-      "theme": "light",
-      "style": "1",
-      "locale": "ja",
-      "toolbar_bg": "#f1f3f6",
-      "enable_publishing": false,
-      "allow_symbol_change": false,
-      "hide_legend": false,
-      "container_id": "tradingview_btcfx"
-    });
-  </script>
-</div>
+      "height": "150",
+      "locale": "en",
+      "dateRange": "12M",
+      "colorTheme": "dark",
+      "trendLineColor": "#37a6ef",
+      "underLineColor": "rgba(55, 166, 239, 0.15)",
+      "isTransparent": true,
+      "autosize": true,
+      "largeChartUrl": ""
+    }
+    </script>
+  </div>
+</section>
 
-<!-- テクニカル分析 -->
-<div class="tradingview-widget-container">
-  <script src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js">
-  {
-    "interval": "30m",
-    "width": "100%",
-    "isTransparent": false,
-    "height": "400",
-    "symbol": "BITFLYER:FXBTCJPY",
-    "showIntervalTabs": true,
-    "displayMode": "single",
-    "locale": "ja"
-  }
-  </script>
-</div>
+<section class="meter">
+  <h2>📊 BTC Technical Meter</h2>
+  <iframe src="https://ssltsw.investing.com?pair_ID=1057391&time_frame=60" width="100%" height="200" frameborder="0" allowtransparency="true"></iframe>
+</section>
 
-<!-- 古着回収 -->
-<h2>♻️ 古着回収プロジェクト</h2>
-<div class="section">
-  <p>ご家庭で眠っている洋服を再活用！</p>
-  <p><strong>45L袋に詰めて1000円で回収</strong>いたします。</p>
-  <p>キッズ・メンズ・レディースすべてOK！（状態によりお断りあり）</p>
-  <p>回収後はクリーニング・仕分けし、eBayやメルカリなどで再販！</p>
-</div>
-
-<!-- 連絡方法 -->
-<h2>📱 ご連絡方法</h2>
-<div class="section">
-  <p>InstagramのDMまたはSMSでご連絡ください。</p>
-  <p>LINEなども今後対応予定！</p>
-</div>
-
-<!-- NEWS -->
-<h2>📰 xNEWSx</h2>
-<div class="section">
-  <p>📢 近日公開：公式グッズ販売</p>
-  <p>📢 近日公開：電子機器販売</p>
-  <p>📢 2025年3月：秋葉原に移転しました</p>
-</div>
-
-<!-- 事業理念 -->
-<h2>💡 事業理念</h2>
-<div class="section">
-  <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
-  <p>不動産賃貸業を通じて築いた信頼を基盤に、リユース・電子機器販売へ展開。</p>
-</div>
-
-<!-- サイト名の由来 -->
-<h2>🌐 サイト名の由来</h2>
-<div class="section">
-  <p>Ultra（超）＋ Trade（売買）＋ Rental（賃貸）＝ Trate</p>
-  <p>さらに、理数系のTexを加えて「xUltraTex」が誕生！</p>
-</div>
-
-<!-- 事業内容 -->
-<h2>💼 事業内容</h2>
-<div class="section">
-  <h3>🏠 不動産賃貸業</h3>
-  <p>戸建てを複数運用中（3家族に貸出）</p>
-  <h3>📱 電子機器販売</h3>
-  <p>秋葉原拠点に、スマホ・タブレット・PCをオンライン展開予定</p>
-</div>
-
-<!-- 物件 -->
-<h2>🏡 x取扱物件x</h2>
-<div class="section">
-  <h3>茨城県 3LDK（賃貸中）</h3>
-  <img src="DF59D336-B2EE-4A18-9A41-4625A0C990BA.jpeg" alt="物件1">
-</div>
-<div class="section">
-  <h3>神奈川県 3LDK（賃貸中）</h3>
-  <img src="IMG_4373.jpeg" alt="物件2">
-</div>
-<div class="section">
-  <h3>埼玉県 4LDK（SOLD OUT）</h3>
-  <img src="IMG_1917.jpeg" alt="物件3">
-</div>
-
-<!-- グッズ -->
-<h2>🛍️ xGOODS INFOx</h2>
-<div class="section">
-  <h3>ロゴキャップ ¥2,980</h3>
-  <img src="IMG_8632.jpeg" alt="キャップ">
-</div>
-<div class="section">
-  <h3>ロゴTシャツ (White) ¥3,980</h3>
-  <img src="IMG_8627.jpeg" alt="Tシャツ白">
-</div>
-<div class="section">
-  <h3>ロゴTシャツ (Yellow) ¥3,980</h3>
-  <img src="IMG_8631.jpeg" alt="Tシャツ黄">
-</div>
-
-<!-- アフィリエイト導線（例） -->
-<h2>🔗 おすすめアイテム</h2>
-<div class="section">
-  <p>古着撮影キットやスマホアクセはこちら：</p>
-  <a href="https://www.amazon.co.jp/dp/B00XXXXXXX?tag=あなたのアフィリエイトID" class="link" target="_blank">▶ 撮影キットを見る</a>
-</div>
-<!-- バナー(SOD select)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=392' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(ＦＣ２動画)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=146' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20744&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(FC2 Affiliate)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=1' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20730&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-<!-- フッター -->
 <footer>
-  &copy; 2025 xUltraTex. All Rights Reserved.｜<a href="https://www.instagram.com/sakitama6425" style="color:cyan;">Instagram</a>｜<a href="https://www.mercari.com/jp/u/xxxxx/" style="color:cyan;">メルカリ</a>
+  <p>&copy; 2025 xUltraTex. All rights reserved.</p>
+  <p>
+    <a href="https://www.mercari.com/jp/u/293152852/" target="_blank">Mercari Profile</a> |
+    <a href="https://www.instagram.com/sakitama6425" target="_blank">Instagram</a>
+  </p>
+  <p>Language: <strong>English</strong> / <a href="#">日本語</a></p>
 </footer>
 
 </body>
 </html>
-
