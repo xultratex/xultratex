@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>xUltraTex - Akihabara Resale Project</title>
   <meta name="description" content="xUltraTex: Akihabara-based project. Buy/sell second-hand clothes, smartphones, and real estate. Sustainable, techy and retro-futuristic.">
   <meta name="keywords" content="used clothes, smartphone, resale, bitcoin, Akihabara, xUltraTex, 90s design, retro, sustainable, Japan">
@@ -33,7 +33,7 @@
       border-bottom: 2px dashed #ff00ff;
     }
     .logo {
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
       color: #00ffff;
     }
@@ -51,15 +51,24 @@
     }
     /* 動画のスタイル */
     iframe {
-      width: 100%; /* 動画を親要素の幅に合わせる */
+      width: 100%;
+      height: 480px; /* 高さを大きく設定 */
+      max-height: 720px; /* 最大高さを設定 */
+      display: block;
+      margin-bottom: 20px;
+      border: none;
+    }
+    /* バナーのスタイル */
+    a img {
+      width: 100%; /* バナーを画面幅に合わせる */
+      max-width: 100%;
       height: auto;
-      display: block; /* ブロック要素として表示 */
-      margin-bottom: 20px; /* 各動画の間にスペース */
+      display: block;
     }
     /* レスポンシブデザイン */
     @media (max-width: 768px) {
       iframe {
-        width: 100%; /* スマホでも動画は横幅いっぱい */
+        height: 300px; /* モバイルでの動画の高さを調整 */
       }
     }
   </style>
@@ -152,7 +161,7 @@
 
 <!-- バナー(SOD select) ここから -->
 <a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=392' target='_blank'>
-  <img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='728' height='90' border='0'>
+  <img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20908&uid=354644' width='100%' height='auto' border='0'>
 </a>
 <!-- ここまで -->
   
