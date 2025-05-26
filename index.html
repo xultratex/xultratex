@@ -125,7 +125,90 @@
   }
   </script>
 </div>
-
+<!-- 株価・為替・指数のウィジェット -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js">
+  {
+    "colorTheme": "light",
+    "dateRange": "12M",
+    "showChart": true,
+    "locale": "ja",
+    "largeChartUrl": "",
+    "isTransparent": false,
+    "width": "100%",
+    "height": "600",
+    "showSymbolLogo": true,
+    "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+    "plotLineColorFalling": "rgba(255, 0, 0, 1)",
+    "gridLineColor": "rgba(240, 243, 250, 1)",
+    "scaleFontColor": "rgba(106, 109, 120, 1)",
+    "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+    "belowLineFillColorFalling": "rgba(255, 0, 0, 0.12)",
+    "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+    "tabs": [
+      {
+        "title": "日本",
+        "symbols": [
+          {
+            "s": "TVC:NI225",
+            "d": "日経225"
+          },
+          {
+            "s": "TSE:7203",
+            "d": "トヨタ"
+          },
+          {
+            "s": "TSE:6758",
+            "d": "ソニー"
+          },
+          {
+            "s": "TSE:9984",
+            "d": "ソフトバンクG"
+          }
+        ],
+        "originalTitle": "日本株"
+      },
+      {
+        "title": "米国",
+        "symbols": [
+          {
+            "s": "DJI",
+            "d": "ダウ工業株30種"
+          },
+          {
+            "s": "NASDAQ:IXIC",
+            "d": "ナスダック"
+          },
+          {
+            "s": "S&P:SPX",
+            "d": "S&P500"
+          }
+        ],
+        "originalTitle": "米国株"
+      },
+      {
+        "title": "為替",
+        "symbols": [
+          {
+            "s": "FX:USDJPY",
+            "d": "ドル円"
+          },
+          {
+            "s": "FX:EURJPY",
+            "d": "ユーロ円"
+          },
+          {
+            "s": "FX:GBPJPY",
+            "d": "ポンド円"
+          }
+        ],
+        "originalTitle": "為替"
+      }
+    ]
+  }
+  </script>
+</div>
 
 
 <!-- NEWS セクション -->
