@@ -19,37 +19,42 @@
             background-color: var(--bg-color);
         }
         .container {
-            max-width: 800px; /* 少しスリムにして読みやすく */
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        /* --- ヘッダー：背景に IMG_0041.jpeg を使用 --- */
         header {
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(53, 122, 189, 0.9) 100%), 
-                        url('fv.jpg') no-repeat center/cover;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.85) 0%, rgba(53, 122, 189, 0.85) 100%), 
+                        url('IMG_0041.jpeg') no-repeat center/cover;
             color: white;
-            padding: 60px 0;
+            padding: 80px 0; /* 少し厚みを持たせて高級感を */
             text-align: center;
         }
         header h1 {
             font-size: 1.1rem;
             margin-bottom: 10px;
             font-weight: normal;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
         header .main-copy {
             font-size: 1.8rem;
             font-weight: bold;
             line-height: 1.4;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
+
         .section {
             padding: 40px 0;
             border-bottom: 1px solid #eee;
         }
 
-        /* --- 画像調整のポイント --- */
+        /* --- 画像調整：ガタガタを直して統一 --- */
         .img-box {
             width: 100%;
-            height: 350px; /* デスクトップ時の高さ */
+            height: 350px; /* PCでの高さを固定 */
             border-radius: 12px;
             margin-bottom: 30px;
             overflow: hidden;
@@ -58,7 +63,7 @@
         .img-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 画像の比率を保ったまま枠に合わせる */
+            object-fit: cover; /* ここで比率を維持して切り抜き */
             display: block;
         }
 
@@ -118,16 +123,22 @@
             border-radius: 50px;
             font-weight: bold;
             margin-top: 20px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
         }
         ul {
             padding-left: 20px;
         }
 
-        /* スマホ向け調整 */
+        /* --- スマホ表示の最適化 --- */
         @media (max-width: 600px) {
             header .main-copy { font-size: 1.4rem; }
             header h1 { font-size: 0.9rem; }
-            .img-box { height: 200px; } /* スマホでは画像の高さを抑える */
+            header { padding: 50px 0; }
+            .img-box { height: 220px; } /* スマホで見やすい高さに統一 */
             .price-table th, .price-table td { padding: 8px; }
         }
     </style>
