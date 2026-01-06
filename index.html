@@ -1,221 +1,234 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xUltraTex</title>
+    <title>自費の訪問生活支援サービス | 精神科看護師によるサポート</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* ドットフォント */
-
+        :root {
+            --primary-color: #4A90E2;
+            --bg-color: #f8fbfd;
+            --text-color: #333;
+            --accent-color: #e67e22;
+        }
         body {
-            background: linear-gradient(45deg, #ffcc00, #ff6699);
-            color: black;
-            font-family: "Arial", sans-serif;
-            text-align: center;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
             margin: 0;
-            overflow-x: hidden; /* 横スクロール防止 */
+            background-color: var(--bg-color);
         }
-        .logo {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 36px;
-            color: cyan;
-            text-shadow: 4px 4px black, 2px 2px magenta;
-            margin: 20px auto;
-            max-width: 90%;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        h1, h3 {
-            color: red;
-            font-size: 24px;
-            text-shadow: 2px 2px yellow;
-        }
-        h2 {
-            background: blue;
+        header {
+            background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
             color: white;
-            padding: 5px;
+            padding: 60px 0;
+            text-align: center;
         }
-        .marquee {
-            font-size: 18px;
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        header .main-copy {
+            font-size: 2.2rem;
             font-weight: bold;
-            color: white;
-            background: red;
-            padding: 5px;
+            line-height: 1.4;
+            margin-bottom: 20px;
         }
         .section {
-            border: 3px solid blue;
-            padding: 15px;
-            margin: 10px auto;
-            background: white;
-            max-width: 80%;
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        h2 {
             text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 1.8rem;
         }
-        img {
-            width: 90%;
-            max-width: 400px;
-            border: 2px solid black;
+        h3 {
+            color: #2c3e50;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 30px;
         }
-        footer {
-            margin-top: 20px;
-            background: black;
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .price-table th {
+            background-color: #f2f2f2;
+        }
+        .important {
+            background-color: #fff5f5;
+            border: 2px solid #fc8181;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .contact-box {
+            background: #2c3e50;
             color: white;
-            padding: 10px;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px;
         }
-        .link {
-            background: black;
-            color: cyan;
-            padding: 10px;
-            font-weight: bold;
-            text-decoration: none;
+        .cta-button {
             display: inline-block;
-            margin-top: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+        .cta-button:hover {
+            opacity: 0.8;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            header .main-copy { font-size: 1.5rem; }
+            header h1 { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
+<header>
+    <div class="container">
+        <h1>精神科急性期病棟で20年勤務した看護師が行う</h1>
+        <div class="main-copy">
+            医療行為を行わない<br>「自費の訪問生活支援サービス」
+        </div>
+        <p>通院・外出・退院後の生活・家族の不安に寄り添います。</p>
+    </div>
+</header>
 
+<section class="section">
+    <div class="container">
+        <h2>このようなお悩みはありませんか？</h2>
+        <div class="card">
+            <ul>
+                <li>退院後の生活がうまくいくか不安</li>
+                <li>通院や外出に付き添える人がいない</li>
+                <li>家族だけでの対応に限界を感じている</li>
+                <li>訪問看護を頼むほどではないが、支援が必要</li>
+                <li>夜間や土日のサポートがほしい</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-<div class="logo">xUltraTex</div>
+<section class="section" style="background-color: #fff;">
+    <div class="container">
+        <h2>サービスの特徴</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div class="card">
+                <strong>精神科20年の実績</strong><br>
+                急性期病棟での豊富な臨床経験に基づき、適切な距離感でサポートします。
+            </div>
+            <div class="card">
+                <strong>柔軟な自費サービス</strong><br>
+                保険制度の枠外だからこそ、夜間・土日や長時間の同行にも対応可能です。
+            </div>
+            <div class="card">
+                <strong>家族支援の重視</strong><br>
+                ご本人だけでなく、支えるご家族の心のケアや対応相談も承ります。
+            </div>
+        </div>
+    </div>
+</section>
 
-<marquee class="marquee">✨ ようこそ💁xU1traTex公式ホームページへ ✨</marquee>
+<section class="section">
+    <div class="container">
+        <h2>支援内容</h2>
+        <h3>ご本人への支援</h3>
+        <ul>
+            <li>通院、買い物、役所等への同行</li>
+            <li>外出や社会参加のサポート</li>
+            <li>生活リズムの確認</li>
+            <li>服薬の声かけ・確認（管理は行いません）</li>
+        </ul>
+        <h3>ご家族への支援</h3>
+        <ul>
+            <li>接し方や対応方法の相談</li>
+            <li>再発兆候の整理</li>
+            <li>退院前後の生活準備サポート</li>
+        </ul>
+    </div>
+</section>
 
-<h2>あなたは <span style="font-family:monospace; color:red;">000042</span> 人目の訪問者です。</h2>
+<section class="section">
+    <div class="container">
+        <div class="important">
+            <h2>行わないこと（重要）</h2>
+            <ul>
+                <li>医療行為（注射、処置、診断）</li>
+                <li>治療方針の判断</li>
+                <li>診察への同席・医師への意見</li>
+            </ul>
+            <p style="text-align: center; font-weight: bold; margin-top: 20px;">※本サービスは「訪問看護」ではありません。</p>
+        </div>
+    </div>
+</section>
 
-<!-- TikTokリンク -->
-<a href="https://lite.tiktok.com/t/ZSHK7x9gDphEd-5OjP4/" class="link" target="_blank">▶ TikTokはこちら</a>
-<br>
+<section class="section">
+    <div class="container">
+        <h2>料金（税込）</h2>
+        <table class="price-table">
+            <tr><th>スポット支援</th><td>90分 12,000円（交通費別）</td></tr>
+            <tr><th>半日支援</th><td>3時間 20,000円</td></tr>
+            <tr><th>定期支援（月4回）</th><td>40,000円</td></tr>
+            <tr><th>定期支援（月8回）</th><td>72,000円</td></tr>
+        </table>
+        <p style="text-align: center; margin-top: 20px;">※初回ヒアリング30分は無料です。</p>
+    </div>
+</section>
 
-    
-<!-- TradingViewチャートウィジェット -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_btcfx"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-    new TradingView.widget({
-      "width": "100%",
-      "height": 500,
-      "symbol": "BITFLYER:FXBTCJPY",
-      "interval": "30",
-      "timezone": "Asia/Tokyo",
-      "theme": "light",
-      "style": "1",
-      "locale": "ja",
-      "toolbar_bg": "#f1f3f6",
-      "enable_publishing": false,
-      "allow_symbol_change": false,
-      "hide_legend": false,
-      "container_id": "tradingview_btcfx"
-    });
-  </script>
-</div>
+<section class="section">
+    <div class="container">
+        <h2>対応エリア</h2>
+        <p style="text-align: center;">
+            国分寺市周辺 / 埼玉南部（所沢・川越・朝霞・和光など）<br>
+            足立区・台東区 / ※その他エリアはご相談ください
+        </p>
+    </div>
+</section>
 
-<!-- TradingView テクニカル分析ウィジェット -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js">
-  {
-    "interval": "30m",
-    "width": "100%",
-    "isTransparent": false,
-    "height": "450",
-    "symbol": "BITFLYER:FXBTCJPY",
-    "showIntervalTabs": true,
-    "displayMode": "single",
-    "locale": "ja"
-  }
-  </script>
-</div>
+<section class="section">
+    <div class="container contact-box">
+        <h2>お問い合わせ</h2>
+        <p>まずはお気軽にご相談ください。</p>
+        <p style="font-size: 1.5rem; font-weight: bold;">電話：〇〇〇-〇〇〇〇-〇〇〇〇</p>
+        <p>メール：xxxxx@xxxx</p>
+        <p>（LINE対応可・応相談）</p>
+        <a href="mailto:xxxxx@xxxx" class="cta-button">メールでお問い合わせ</a>
+    </div>
+</section>
 
-<!-- NEWS セクション -->
-<h2>📰 xNEWSx</h2>
-<div class="section">
-    <p>📢 近日公開：公式グッズ販売</p>
-    <p>📢 近日公開：電子機器販売</p>
-    <p>📢 2025年3月：秋葉原に移転しました</p>
-</div>
-
-<!-- 会社概要 -->
-<h2>🌟 会社概要 🌟</h2>
-
-<div class="section">
-    <h2>📌 事業理念</h2>
-    <p><strong>「信頼を礎に、新たな価値を創造する」</strong></p>
-    <p>
-        私たちは不動産賃貸業を通じて、安心と快適な住環境を提供してきました。<br>
-        この信頼を礎に、電子機器のオンライン販売を開始し、より多くの人々の生活を支えていきます。
-    </p>
-</div>
-
-<div class="section">
-    <h2>🌐 サイト名の由来</h2>
-    <p>
-        スマートフォンは今や生活に不可欠な存在となり、中古品のリユースはエコでサステナブルな社会に貢献します。<br>
-        将来的には、誰でも売ったり買ったりできるサイトに発展させることを目指し、<br>
-        「Ultra（究極・超）」と「Trade（売買）」を掛け合わせて「Trate」という言葉を作りました。<br>
-        さらに、「Trate」には「Trade（売買）」と「Rental（賃貸）」の意味も込めています。<br>
-        そこに秋葉原らしい理数系の「Tex」の要素を加え、「xUltraTex」を考えました。
-    </p>
-</div>
-
-<div class="section">
-    <h2>💼 事業内容</h2>
-    <h3>🏠 不動産賃貸業</h3>
-    <p>家族向けの戸建て賃貸を展開し、現在3家族に貸出中。</p>
-
-    <h3>📱 電子機器のオンライン販売</h3>
-    <p>秋葉原に移転し、スマホ・タブレット・PCを販売予定。</p>
-</div>
-
-<!-- 物件情報 -->
-<h2>🏡 x取扱物件x</h2>
-
-<div class="section">
-    <h3>茨城県 3LDK（現在賃貸中）</h3>
-    <img src="DF59D336-B2EE-4A18-9A41-4625A0C990BA.jpeg" alt="茨城県 3LDK">
-</div>
-
-<div class="section">
-    <h3>神奈川県 3LDK（現在賃貸中）</h3>
-    <img src="IMG_4373.jpeg" alt="神奈川県 3LDK">
-</div>
-
-<div class="section">
-    <h3>埼玉県 4LDK（SOLD OUT）</h3>
-    <img src="IMG_1917.jpeg" alt="埼玉県 4LDK">
-</div>
-
-<!-- 商品情報 -->
-<h2>🛍️ xGOODS INFOx</h2>
-
-<div class="section">
-    <h3>ロゴキャップ ¥2,980</h3>
-    <img src="IMG_8632.jpeg" alt="ロゴキャップ">
-</div>
-
-<div class="section">
-    <h3>ロゴTシャツ (White) ¥3,980</h3>
-    <img src="IMG_8627.jpeg" alt="ロゴTシャツ White">
-</div>
-
-<div class="section">
-    <h3>ロゴTシャツ (Yellow) ¥3,980</h3>
-    <img src="IMG_8631.jpeg" alt="ロゴTシャツ Yellow">
-</div>
-
-<footer>
-    &copy; 2025 xUltraTex. All Rights Reserved.
+<footer style="text-align: center; padding: 40px 0; color: #888;">
+    &copy; 2024 自費訪問生活支援サービス
 </footer>
 
 </body>
 </html>
-
-<!-- バナー(ＦＣ２動画)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=146' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20744&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
-
-<!-- バナー(FC2 Affiliate)  ここから -->
-<a href='https://cnt.affiliate.fc2.com/cgi-bin/click.cgi?aff_userid=354644&aff_siteid=347077&aff_shopid=1' target='_blank'>
-<img src='https://cnt.affiliate.fc2.com/cgi-bin/banner.cgi?aff_siteid=347077&bid=20730&uid=354644' width='728' height='90' border='0'></a>
-<!-- ここまで -->
