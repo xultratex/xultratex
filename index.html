@@ -19,37 +19,37 @@
             background-color: var(--bg-color);
         }
         .container {
-            max-width: 900px;
+            max-width: 800px; /* 少しスリムにして読みやすく */
             margin: 0 auto;
             padding: 0 20px;
         }
         header {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(53, 122, 189, 0.9) 100%), 
-                        url('fv.jpg') no-repeat center/cover; /* メイン画像を背景に設定可 */
+                        url('fv.jpg') no-repeat center/cover;
             color: white;
-            padding: 80px 0;
+            padding: 60px 0;
             text-align: center;
         }
         header h1 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin-bottom: 10px;
             font-weight: normal;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         header .main-copy {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             line-height: 1.4;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
         }
         .section {
-            padding: 60px 0;
+            padding: 40px 0;
             border-bottom: 1px solid #eee;
         }
+
+        /* --- 画像調整のポイント --- */
         .img-box {
             width: 100%;
-            height: auto;
+            height: 350px; /* デスクトップ時の高さ */
             border-radius: 12px;
             margin-bottom: 30px;
             overflow: hidden;
@@ -57,13 +57,16 @@
         }
         .img-box img {
             width: 100%;
+            height: 100%;
+            object-fit: cover; /* 画像の比率を保ったまま枠に合わせる */
             display: block;
         }
+
         h2 {
             text-align: center;
             color: var(--primary-color);
-            margin-bottom: 40px;
-            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
         }
         h3 {
             color: #2c3e50;
@@ -73,7 +76,7 @@
         }
         .card {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             margin-bottom: 20px;
@@ -82,14 +85,16 @@
             width: 100%;
             border-collapse: collapse;
             background: white;
+            font-size: 0.9rem;
         }
         .price-table th, .price-table td {
             border: 1px solid #ddd;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
         }
         .price-table th {
             background-color: #f2f2f2;
+            width: 35%;
         }
         .important {
             background-color: #fff5f5;
@@ -101,7 +106,7 @@
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 40px 20px;
             border-radius: 8px;
         }
         .cta-button {
@@ -113,17 +118,17 @@
             border-radius: 50px;
             font-weight: bold;
             margin-top: 20px;
-            transition: opacity 0.3s;
-        }
-        .cta-button:hover {
-            opacity: 0.8;
         }
         ul {
             padding-left: 20px;
         }
+
+        /* スマホ向け調整 */
         @media (max-width: 600px) {
-            header .main-copy { font-size: 1.5rem; }
-            header h1 { font-size: 1.1rem; }
+            header .main-copy { font-size: 1.4rem; }
+            header h1 { font-size: 0.9rem; }
+            .img-box { height: 200px; } /* スマホでは画像の高さを抑える */
+            .price-table th, .price-table td { padding: 8px; }
         }
     </style>
 </head>
@@ -140,7 +145,8 @@
 </header>
 
 <section class="section">
-        <div class="section">
+    <div class="container">
+        <div class="img-box">
             <img src="IMG_0039.jpeg" alt="寄り添い支援のイメージ">
         </div>
 
@@ -180,7 +186,7 @@
 <section class="section">
     <div class="container">
         <h2>支援内容</h2>
-    <div class="section">
+        <div class="img-box">
             <img src="IMG_0035.jpeg" alt="対面での相談のイメージ">
         </div>
         
@@ -203,7 +209,7 @@
 <section class="section">
     <div class="container">
         <div class="important">
-            <h2>行わないこと（重要）</h2>
+            <h2 style="color: #c53030; margin-bottom: 20px;">行わないこと（重要）</h2>
             <ul>
                 <li>医療行為（注射、処置など）</li>
                 <li>治療方針の判断</li>
@@ -241,9 +247,9 @@
     <div class="container contact-box">
         <h2>お問い合わせ</h2>
         <p>まずはお気軽にご相談ください。</p>
-        <p style="font-size: 1.5rem; font-weight: bold;">電話：09051963332</p>
+        <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">電話：09051963332</p>
         <p>メール：ss09051963332@gmail.com</p>
-        <p>（LINE対応可・応相談）</p>
+        <p style="font-size: 0.9rem;">（LINE対応可・応相談）</p>
         <a href="mailto:ss09051963332@gmail.com" class="cta-button">メールでお問い合わせ</a>
     </div>
 </section>
