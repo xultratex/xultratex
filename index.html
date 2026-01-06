@@ -24,25 +24,40 @@
             padding: 0 20px;
         }
         header {
-            background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(53, 122, 189, 0.9) 100%), 
+                        url('fv.jpg') no-repeat center/cover; /* メイン画像を背景に設定可 */
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
         }
         header h1 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 10px;
             font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         header .main-copy {
             font-size: 2.2rem;
             font-weight: bold;
             line-height: 1.4;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
         }
         .section {
             padding: 60px 0;
             border-bottom: 1px solid #eee;
+        }
+        .img-box {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .img-box img {
+            width: 100%;
+            display: block;
         }
         h2 {
             text-align: center;
@@ -126,6 +141,10 @@
 
 <section class="section">
     <div class="container">
+        <div class="img-box">
+            <img src="fv.jpg" alt="寄り添い支援のイメージ">
+        </div>
+
         <h2>このようなお悩みはありませんか？</h2>
         <div class="card">
             <ul>
@@ -162,6 +181,10 @@
 <section class="section">
     <div class="container">
         <h2>支援内容</h2>
+        <div class="img-box">
+            <img src="support.jpg" alt="対面での相談のイメージ">
+        </div>
+        
         <h3>ご本人への支援</h3>
         <ul>
             <li>通院、買い物、役所等への同行</li>
@@ -221,13 +244,13 @@
         <p>まずはお気軽にご相談ください。</p>
         <p style="font-size: 1.5rem; font-weight: bold;">電話：09051963332</p>
         <p>メール：ss09051963332@gmail.com</p>
-     <p>（LINE対応可・応相談）</p>
-<a href="mailto:ss09051963332@gmail.com" class="cta-button">メールでお問い合わせ</a>
+        <p>（LINE対応可・応相談）</p>
+        <a href="mailto:ss09051963332@gmail.com" class="cta-button">メールでお問い合わせ</a>
     </div>
 </section>
 
 <footer style="text-align: center; padding: 40px 0; color: #888;">
-    &copy; 2026  生活支援サービス
+    &copy; 2026 生活支援サービス
 </footer>
 
 </body>
