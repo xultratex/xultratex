@@ -3,486 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自費の訪問生活支援サービス | 精神科看護師によるサポート</title>
+    
+    <title>【厚木市の不用品回収・便利屋】[屋号] | 軽バンで即日お伺い！</title>
+    
+    <meta name="description" content="神奈川県厚木市の不用品回収、粗大ゴミ処分、お庭の草むしりなら「[屋号]」へ！地元の自宅兼倉庫と自己所有の軽バン稼働で、余計なコストをカットし地域最安値に挑戦中。お見積り無料、即日対応可能です。">
+    
     <style>
-        :root {
-            --primary-color: #4A90E2;
-            --bg-color: #f8fbfd;
-            --text-color: #333;
-            --accent-color: #e67e22;
-        }
+        /* iモード風のレトロ＆爆速CSS */
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            margin: 0;
-            background-color: var(--bg-color);
-        }
-        .container {
-            max-width: 800px;
+            background-color: #E0FFFF; /* レトロな水色背景 */
+            color: #000000;
+            font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+            max-width: 480px; /* ガラケー・スマホ幅を意識して中央寄せ */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 10px;
+            line-height: 1.6;
         }
-
-        /* --- ヘッダー：背景に IMG_0041.jpeg を使用 --- */
-        header {
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.85) 0%, rgba(53, 122, 189, 0.85) 100%), 
-                        url('IMG_0041.jpeg') no-repeat center/cover;
-            color: white;
-            padding: 80px 0; /* 少し厚みを持たせて高級感を */
+        /* 見出し1（SEOに必須） */
+        h1 {
+            font-size: 18px;
+            color: #FF0000;
             text-align: center;
+            border: 2px dotted #FF0000;
+            padding: 5px;
         }
-        header h1 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: normal;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-        }
-        header .main-copy {
-            font-size: 1.8rem;
-            font-weight: bold;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-        }
-
-        .section {
-            padding: 40px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* --- 画像調整：ガタガタを直して統一 --- */
-        .img-box {
-            width: 100%;
-            height: 350px; /* PCでの高さを固定 */
-            border-radius: 12px;
-            margin-bottom: 30px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* ここで比率を維持して切り抜き */
-            display: block;
-        }
-
+        /* 見出し2 */
         h2 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 1.5rem;
-        }
-        h3 {
-            color: #2c3e50;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-            margin-top: 30px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            font-size: 0.9rem;
-        }
-        .price-table th, .price-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .price-table th {
-            background-color: #f2f2f2;
-            width: 35%;
-        }
-        .important {
-            background-color: #fff5f5;
-            border: 2px solid #fc8181;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .contact-box {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 8px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
+            font-size: 16px;
+            color: #0000FF;
+            background-color: #FFFF00; /* 黄色背景で目立たせる */
+            padding: 5px;
             margin-top: 20px;
-            transition: 0.3s;
+            margin-bottom: 10px;
         }
-        .cta-button:hover {
-            opacity: 0.8;
-            transform: translateY(-2px);
+        /* ガラケー名物・文字の点滅（CSSアニメーションで再現） */
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: #FF00FF;
+            font-weight: bold;
         }
-        ul {
-            padding-left: 20px;
+        @keyframes blinker {
+            50% { opacity: 0; }
         }
-
-        /* --- スマホ表示の最適化 --- */
-        @media (max-width: 600px) {
-            header .main-copy { font-size: 1.4rem; }
-            header h1 { font-size: 0.9rem; }
-            header { padding: 50px 0; }
-            .img-box { height: 220px; } /* スマホで見やすい高さに統一 */
-            .price-table th, .price-table td { padding: 8px; }
-        }
+        /* 区切り線 */
+        hr { border: 1px dashed #888; margin: 15px 0; }
+        /* リンク */
+        a { color: #0000FF; text-decoration: underline; font-size: 18px; font-weight: bold; }
+        .price { color: #FF0000; font-weight: bold; }
+        .center { text-align: center; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>精神科急性期病棟で20年勤務した看護師が行う</h1>
-        <div class="main-copy">
-            医療行為を行わない<br>「自費の訪問生活支援サービス」
-        </div>
-        <p>通院・外出・退院後の生活・家族の不安に寄り添います。</p>
+    <h1>＼厚木市密着／<br>【[屋号]】<br>不用品回収＆便利屋</h1>
+
+    <div class="center">
+        <span class="blink">!!即日対応可能!!</span><br>
+        (｀・ω・´)ゝ<br>
+        厚木市〇〇から軽バンで急行！
     </div>
-</header>
 
-<section class="section">
-    <div class="container">
-        <div class="img-box">
-            <img src="IMG_0039.jpeg" alt="寄り添い支援のイメージ">
-        </div>
+    <hr>
 
-        <h2>このようなお悩みはありませんか？</h2>
-        <div class="card">
-            <ul>
-                <li>退院後の生活がうまくいくか不安</li>
-                <li>通院や外出に付き添える人がいない</li>
-                <li>家族だけでの対応に限界を感じている</li>
-                <li>訪問看護を頼むほどではないが、支援が必要</li>
-                <li>夜間や土日のサポートがほしい</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    <h2>[1] メニュー・料金</h2>
+    <ul>
+        <li><strong>【不用品回収・お片付け】</strong><br>
+            家具1点から家まるごとまで！<br>
+            軽バンのせ放題 <span class="price">要見積もり♪</span>
+        </li>
+        <br>
+        <li><strong>【お庭の草むしり・剪定】</strong><br>
+            1時間 <span class="price">X,XXX円〜</span>
+        </li>
+        <br>
+        <li><strong>【便利屋作業】</strong><br>
+            家具移動・電球交換など<br>
+            1時間 <span class="price">X,XXX円〜</span>
+        </li>
+    </ul>
 
-<section class="section" style="background-color: #fff;">
-    <div class="container">
-        <h2>サービスの特徴</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-            <div class="card">
-                <strong>精神科20年の実績</strong><br>
-                急性期病棟での豊富な臨床経験に基づき、適切な距離感でサポートします。
-            </div>
-            <div class="card">
-                <strong>柔軟な自費サービス</strong><br>
-                保険制度の枠外だからこそ、夜間・土日や長時間の同行にも対応可能です。
-            </div>
-            <div class="card">
-                <strong>家族支援の重視</strong><br>
-                ご本人だけでなく、支えるご家族の心のケアや対応相談も承ります。
-            </div>
-        </div>
-    </div>
-</section>
+    <hr>
 
-<section class="section">
-    <div class="container">
-        <h2>支援内容</h2>
-        <div class="img-box">
-            <img src="IMG_0035.jpeg" alt="対面での相談のイメージ">
-        </div>
-        
-        <h3>ご本人への支援</h3>
-        <ul>
-            <li>通院、買い物、役所等への同行</li>
-            <li>外出や社会参加のサポート</li>
-            <li>生活リズムの確認</li>
-            <li>服薬の声かけ・確認（管理は行いません）</li>
-        </ul>
-        <h3>ご家族への支援</h3>
-        <ul>
-            <li>接し方や対応方法の相談</li>
-            <li>再発兆候の整理</li>
-            <li>退院前後の生活準備サポート</li>
-        </ul>
-    </div>
-</section>
+    <h2>[2] 当店の強み３つ</h2>
+    <ol>
+        <li>🏠 厚木市内の自宅兼倉庫だから固定費ゼロで安い！</li>
+        <li>🚗 小回りの利く軽バンで、細い路地も即日対応！</li>
+        <li>🤝 「ご近所さん」だからこその安心感とまごころ！</li>
+    </ol>
 
-<section class="section">
-    <div class="container">
-        <div class="important">
-            <h2 style="color: #c53030; margin-bottom: 20px;">行わないこと（重要）</h2>
-            <ul>
-                <li>医療行為（注射、処置など）</li>
-                <li>治療方針の判断</li>
-                <li>診察への同席・医師への意見</li>
-            </ul>
-            <p style="text-align: center; font-weight: bold; margin-top: 20px;">※本サービスは「訪問看護」ではありません。</p>
-        </div>
-    </div>
-</section>
+    <hr>
 
-<section class="section">
-    <div class="container">
-        <h2>料金（税込）</h2>
-        <table class="price-table">
-            <tr><th>スポット支援</th><td>90分 12,000円（交通費込み）</td></tr>
-            <tr><th>半日支援</th><td>3時間 20,000円</td></tr>
-            <tr><th>定期支援（月4回）</th><td>40,000円</td></tr>
-            <tr><th>定期支援（月8回）</th><td>72,000円</td></tr>
-        </table>
-        <p style="text-align: center; margin-top: 20px;">※初回ヒアリング30分は無料です。</p>
-    </div>
-</section>
+    <h2>[3] ご依頼・お問い合わせ</h2>
+    <p>「こんなこと頼める？」というご相談だけでも大歓迎です！<br>
+    お気軽にどうぞ(*^_^*)</p>
 
-<section class="section" style="background-color:#fff;">
-  <div class="container">
-    <h2>退院後の生活支援とは？</h2>
-
-    <p>
-      精神科の退院はゴールではなく、<strong>生活再開のスタート</strong>です。<br>
-      病状が安定していても、生活リズムや環境が整わないことで再入院につながるケースは少なくありません。
+    <p class="center">
+        ☎ <a href="tel:090-XXXX-XXXX">090-XXXX-XXXX</a><br>
+        （担当：[お名前]）<br>
+        <br>
+        📲 <a href="https://line.me/R/ti/p/あなたのLINEのID等">LINEで写真見積もりはコチラ！</a><br>
+        <br>
+        ✉ <a href="mailto:info@example.com" style="font-size: 14px;">メールでお問い合わせ</a>
     </p>
 
-    <h3>退院後に起こりやすい困りごと</h3>
-    <div class="card">
-      <ul>
-        <li>生活リズムが乱れてしまう</li>
-        <li>通院や外出が負担になる</li>
-        <li>家族との関係がぎくしゃくする</li>
-        <li>「大丈夫」と無理をしてしまう</li>
-      </ul>
+    <hr>
+
+    <h2>[4] 会社概要</h2>
+    <p style="font-size: 14px;">
+        屋号：[屋号]<br>
+        拠点：神奈川県厚木市〇〇XX-X<br>
+        代表：[お名前]<br>
+        古物商許可：第XXXXX号<br>
+        （※取得後に記載・神奈川県公安委員会）
+    </p>
+
+    <hr>
+
+    <div class="center" style="font-size: 12px; color: #666;">
+        (C) 2026 [屋号] All Rights Reserved.<br>
+        <br>
+        <a href="#" style="font-size: 12px; font-weight: normal;">↑ページトップへ</a>
     </div>
-
-    <h3>退院後の生活支援とは</h3>
-    <p>
-      退院後の生活支援とは、<strong>医療行為を行わず</strong>、<br>
-      日常生活・外出・家族との関係を整えるためのサポートです。
-    </p>
-
-    <p>
-      治療ではなく、<strong>「生活が崩れない状態を保つ」</strong>ことを目的としています。
-    </p>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <h2>精神科の自費支援とは</h2>
-
-    <p>
-      精神科の自費支援とは、保険制度に縛られず、<br>
-      <strong>生活や気持ちに寄り添うことを目的とした支援</strong>です。
-    </p>
-
-    <div class="card">
-      <ul>
-        <li>医療行為は行いません</li>
-        <li>治療方針の判断はしません</li>
-        <li>生活・外出・家族支援が中心です</li>
-      </ul>
-    </div>
-
-    <h3>訪問看護との違い</h3>
-    <table class="price-table">
-      <tr>
-        <th>訪問看護</th>
-        <td>医療的支援が中心・時間や内容に制限あり</td>
-      </tr>
-      <tr>
-        <th>自費の訪問生活支援</th>
-        <td>生活支援に特化・時間や内容が柔軟</td>
-      </tr>
-    </table>
-
-    <p style="margin-top:20px;">
-      「まだ医療につなぐほどではない」<br>
-      そんな段階で利用されることが多い支援です。
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>精神科退院後、家族だけで支えるのがつらいと感じたら</h2>
-
-    <p>
-      精神科を退院したあと、<br>
-      一番大きな負担を抱えやすいのは<strong>ご家族</strong>です。
-    </p>
-
-    <p>
-      「本人は落ち着いているように見える」<br>
-      「でも、どこまで関わればいいのかわからない」<br>
-      そんな声はとても多く聞かれます。
-    </p>
-
-    <h3>家族が疲弊しやすい理由</h3>
-    <div class="card">
-      <ul>
-        <li>再発させてはいけないというプレッシャー</li>
-        <li>正解の接し方がわからない</li>
-        <li>相談できる相手がいない</li>
-        <li>「家族なのだから」という責任感</li>
-      </ul>
-    </div>
-
-    <h3>家族支援も生活支援の一部です</h3>
-    <p>
-      退院後の生活が安定するかどうかは、<br>
-      <strong>ご本人だけでなく、支える家族の状態</strong>にも大きく影響します。
-    </p>
-
-    <p>
-      家族が無理をし続けることで、<br>
-      結果的に関係が悪化してしまうケースも少なくありません。
-    </p>
-
-    <h3>第三者が入る意味</h3>
-    <div class="card">
-      <ul>
-        <li>感情的にならずに状況を整理できる</li>
-        <li>「家族だから言えないこと」を代わりに伝えられる</li>
-        <li>関わりすぎ・距離を取りすぎを調整できる</li>
-      </ul>
-    </div>
-
-    <p>
-      家族支援は、<strong>再発や再入院を防ぐための予防的な支援</strong>でもあります。
-    </p>
-  </div>
-</section>
-
-<section class="section" style="background-color:#fff;">
-  <div class="container">
-    <h2>今すぐ困っていない方へ</h2>
-
-    <p>
-      このページをここまで読んでいるということは、<br>
-      「今すぐ大変な状況」ではないかもしれません。
-    </p>
-
-    <p>
-      それでも、<br>
-      <strong>どこかで引っかかるものがあった</strong>のではないでしょうか。
-    </p>
-
-    <h3>多くの方が、こう言います</h3>
-    <div class="card">
-      <ul>
-        <li>「今は大丈夫そうなんです」</li>
-        <li>「もう少し様子を見ようと思っていて」</li>
-        <li>「相談するほどではない気がして」</li>
-      </ul>
-    </div>
-
-    <p>
-      これらはすべて、<br>
-      <strong>これまで多くのご家族から聞いてきた言葉</strong>です。
-    </p>
-
-    <p>
-      そして多くの場合、<br>
-      相談が来るのは<strong>状況が少し崩れてから</strong>でした。
-    </p>
-
-    <h3>生活は、静かに崩れます</h3>
-    <p>
-      精神科の退院後の生活は、<br>
-      ある日突然悪くなるというより、<br>
-      <strong>少しずつ、気づかないうちに変化</strong>していきます。
-    </p>
-
-    <p>
-      だからこそ、<br>
-      「何も起きていない今」こそが、<br>
-      一番支援を入れやすいタイミングでもあります。
-    </p>
-  </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>料金（税込）</h2>
-        <table class="price-table">
-            <tr><th>スポット支援</th><td>90分 12,000円（交通費込み）</td></tr>
-            <tr><th>半日支援</th><td>3時間 20,000円</td></tr>
-            <tr><th>定期支援（月4回）</th><td>40,000円</td></tr>
-            <tr><th>定期支援（月8回）</th><td>72,000円</td></tr>
-        </table>
-        <p style="text-align: center; margin-top: 20px;">※初回ヒアリング30分は無料です。</p>
-    </div>
-</section>
-
-
-<section class="section" style="background-color:#fff;">
-  <div class="container">
-    <h2>よくある質問（FAQ）</h2>
-
-    <div class="card">
-      <strong>Q. 訪問看護とは何が違いますか？</strong><br>
-      A. 医療行為や治療判断は行わず、生活や外出、家族支援を中心に行います。
-    </div>
-
-    <div class="card">
-      <strong>Q. 退院直後でなくても利用できますか？</strong><br>
-      A. はい。退院後しばらく経ってからのご相談も多くあります。
-    </div>
-
-    <div class="card">
-      <strong>Q. 家族だけの相談も可能ですか？</strong><br>
-      A. 可能です。ご本人が同席しなくても対応しています。
-    </div>
-
-    <div class="card">
-      <strong>Q. 病名がなくても利用できますか？</strong><br>
-      A. はい。診断名の有無は問いません。
-    </div>
-
-    <div class="card">
-      <strong>Q. 医師や病院と連携してもらえますか？</strong><br>
-      A. 医療判断は行いませんが、ご本人・ご家族の同意があれば情報共有の相談は可能です。
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="section">
-    <div class="container">
-        <h2>対応エリア</h2>
-        <p style="text-align: center;">
-            国分寺市周辺 / 埼玉南部（所沢・川越・朝霞・和光など）<br>
-            足立区・台東区 / ※その他エリアはご相談ください
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container contact-box">
-        <h2>お問い合わせ</h2>
-        <p>まずはお気軽にご相談ください。</p>
-        <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">電話：09051963332</p>
-        <p>メール：ss09051963332@gmail.com</p>
-        <p style="font-size: 0.9rem;">（LINE対応可・応相談）</p>
-        <a href="mailto:ss09051963332@gmail.com" class="cta-button">メールでお問い合わせ</a>
-    </div>
-</section>
-
-<footer style="text-align: center; padding: 40px 0; color: #888;">
-    &copy; 2026 生活支援サービス
-</footer>
 
 </body>
 </html>
