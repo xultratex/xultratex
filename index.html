@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>不用品回収・便利屋 [おたすけゴンすけ] | 軽バンで即日お伺い！</title>
+    <title>不用品回収・便利屋 おたすけゴンすけ | 軽バンで即日お伺い！</title>
     
-    <meta name="description" content="不用品回収、粗大ゴミ処分、お庭の草むしりなら「[おたすけゴンすけ]」へ！地元密着で余計なコストをカットし地域最安値に挑戦中。お見積り無料、即日対応可能です。">
+    <meta name="description" content="不用品回収、粗大ゴミ処分、お庭の草むしりなら「おたすけゴンすけ」へ！地元密着で余計なコストをカットし地域最安値に挑戦中。お見積り無料、即日対応可能です。">
     
     <style>
         /* iモード風のレトロ＆爆速CSS */
@@ -45,19 +45,51 @@
         @keyframes blinker {
             50% { opacity: 0; }
         }
+        
+        /* 🚨 追加：文字が流れるアニメーション（マーキー） 🚨 */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #000000; /* 黒背景でレトロ感UP */
+            color: #FFFF00; /* 黄色文字で目立たせる */
+            padding: 5px 0;
+            margin: 10px 0;
+            border: 1px solid #FF0000;
+        }
+        .marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee-anim 10s linear infinite;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        @keyframes marquee-anim {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
         /* 区切り線 */
         hr { border: 1px dashed #888; margin: 15px 0; }
         /* リンク */
         a { color: #0000FF; text-decoration: underline; font-size: 18px; font-weight: bold; }
         .price { color: #FF0000; font-weight: bold; }
         .center { text-align: center; }
+        .area-text { text-align: center; font-size: 14px; font-weight: bold; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <h1>＼地域密着／<br>【[おたすけゴンすけ]】<br>不用品回収＆便利屋</h1>
+    <h1>＼地域密着／<br>【おたすけゴンすけ】<br>不用品回収＆便利屋</h1>
     
-    <br>東京都武蔵野市・三鷹市・小金井市・町田市北部、神奈川県厚木市・海老名市・座間市・愛川町</h1>
+    <div class="area-text">
+        東京都武蔵野市・三鷹市・小金井市・町田市北部<br>
+        神奈川県厚木市・海老名市・座間市・愛川町
+    </div>
+
+    <div class="marquee-container">
+        <span class="marquee-text">🚛💨 ただいま即日対応強化中！東京都下〜神奈川県央エリアまで、ゴンすけが軽バンで駆けつけます！お見積り完全無料！まずはお電話かLINEで！ 🚛💨</span>
+    </div>
 
     <div class="center">
         <span class="blink">!!即日対応可能!!</span><br>
@@ -101,25 +133,21 @@
 
     <p class="center">
         ☎ <a href="tel:090-5196-3332">090-5196-3332</a><br>
-        （担当：[ゴンすけ]）<br>
+        （担当：ゴンすけ）<br>
         <br>
         📲 <a href="https://line.me/ti/p/KeM_5tNDNz">😄24時間⭕️LINEで写真見積もりはコチラ！</a><br>
-        <br>
-       
-
-    <hr>
+    </p> <hr>
 
     <h2>[4] 会社概要</h2>
     <p style="font-size: 14px;">
-        屋号：[おたすけゴンすけ]<br>
+        屋号：おたすけゴンすけ<br>
         拠点：東京都吉祥寺→神奈川県厚木市<br>
-        
     </p>
 
     <hr>
 
     <div class="center" style="font-size: 12px; color: #666;">
-        (C) 2026 [おたすけゴンすけ] All Rights Reserved.<br>
+        (C) 2026 おたすけゴンすけ All Rights Reserved.<br>
         <br>
         <a href="#" style="font-size: 12px; font-weight: normal;">↑ページトップへ</a>
     </div>
